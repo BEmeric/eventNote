@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion des événements</title>
+    <script>
+        async function addEvent() {
+            const start = document.getElementById('start').value;
+            const stop = document.getElementById('stop').value;
+            const tag = document.getElementById('tag').value;
+
+            const response = await fetch('/add_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ Start: start, Stop: stop, Tag: tag }),
+            });
+            const data = await response.json();
+            alert(data.message);
+        }
+
+        async function listEvents() {
+            const response = await fetch('/list_events');
+            const data = await response.json();
+            const eventsList = document.getElementById('eventsList');
+            eventsList.innerHTML = '';
+            data.forEach(event => {
+                eventsList.innerHTML += `<li>${event.Tag} (Start: ${event.Start}, Stop: ${event.Stop}) <button onclick="removeEvent('${event._id}')">Supprimer</button></li>`;
+            });
+        }
+
+        async function removeEvent(id) {
+            const response = await fetch(`/remove_event/${id}`, {
+                method: 'DELETE',
+            });
+            const data = await response.json();
+            alert(data.message);
+            listEvents();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            listEvents();
+        });
+    </script>
+</head>
+<body>
+    <h1>Gestion des événements</h1>
+    <form onsubmit="event.preventDefault(); addEvent();">
+        <label for="start">Start:</label>
+        <input type="date" id="start" name="start" required>
+        <label for="stop">Stop:</label>
+        <input type="date" id="stop" name="stop">
+        <label for="tag">Tag:</label>
+        <input type="text" id="tag" name="tag" required>
+        <button type="submit">Ajouter un événement</button>
+    </form>
+    <h2>Liste des événements</h2>
+    <ul id="eventsList"></ul>
+</body>
+</html>
