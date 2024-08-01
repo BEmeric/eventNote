@@ -25,7 +25,7 @@ eventNote
 Atlas MongoDB is used here to manage event Data.
 Click in this link to access database (https://account.mongodb.com/account/login?signedOut=true)
 - login : emericbankole@gmail.com
-- pwd   : bioserinity2024
+- pwd   : ***************** (A envoyer par mail)
 
 ```
 DataBase's name -> "db_events"
