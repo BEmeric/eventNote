@@ -11,14 +11,14 @@ An event has 3 informations:
    - tag (name of event)
 
 ### Structure of project:
-'''
+```
 eventNote
 ├── client.py
 ├── README.md
 ├── server.py
 └── templates
     └── index.html
-'''
+```
 
 ### Database architecture:
 Atlas MongoDB is used here to manage event Data.
@@ -27,7 +27,7 @@ pwd   : bioserinity2024
 
 '''
 DataBase's name -> "db_events"
-├── Collection's name -> "collection_event"
+└── index.htmlCollection's name -> "collection_event"
 '''
   
 ### USAGE:
