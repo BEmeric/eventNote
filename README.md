@@ -14,7 +14,7 @@ USAGE:
   ### 1. Run the server in a terminal
       python server.py
       Use this Url http://127.0.0.1:5000 to check if the server is ready to be used.
-  ### 2. run CLI client to manage events
+  ### 2. In a another terminal run CLI client to manage events
        python client.py [add|list|remove] [arguments...]
 
   ### 3. To add an event run the following code example:
