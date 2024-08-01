@@ -10,21 +10,25 @@ An event has 3 informations:
    - stop (date format but optional)
    - tag (name of event)
 
-### Architecture of project:
+### Structure of project:
+'''
 eventNote
-    | -- server.py
-    | -- client.py
-    | -- Templates
-              | -- index.html
+├── client.py
+├── README.md
+├── server.py
+└── templates
+    └── index.html
+'''
 
 ### Database architecture:
 Atlas MongoDB is used here to manage event Data.
 login : emericbankole@gmail.com
 pwd   : bioserinity2024
-    
+
+'''
 DataBase's name -> "db_events"
-                |
-                | -- Collection's name -> "collection_event"
+├── Collection's name -> "collection_event"
+'''
   
 ### USAGE:
   ### 1. Run the server in a terminal
