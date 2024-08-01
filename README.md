@@ -11,17 +11,21 @@ An event has 3 informations:
    - tag (name of event)
 
 USAGE:
-   python client.py [add|list|remove] [arguments...]
+  ### 1. Run the server in a terminal
+      python server.py
+      Use this Url http://127.0.0.1:5000 to check if the server is ready to be used.
+  ### 2. run CLI client to manage events
+       python client.py [add|list|remove] [arguments...]
 
-   ## To add an event run the following code example:
+  ### 3. To add an event run the following code example:
       python client.py add <start> <tag> [stop]
       Example:
          python client.py add '27-09-2024' 'Mariage' '27-09-2024'
 
-   ## To display all events saved in database run the following code examle:
+  ### 4. To display all events saved in database run the following code examle:
       python client.py list
 
-   ## To delete an event run the following code example:
+  ### 5. To delete an event run the following code example:
       python client.py remove <event_id>
       Example:
          python client.py remove 66ab553e269bb7424551a561
