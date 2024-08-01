@@ -25,10 +25,10 @@ Atlas MongoDB is used here to manage event Data.
 login : emericbankole@gmail.com
 pwd   : bioserinity2024
 
-'''
+```
 DataBase's name -> "db_events"
-└── index.htmlCollection's name -> "collection_event"
-'''
+        └── Collection's name -> "collection_event"
+```
   
 ### USAGE:
   ### 1. Run the server in a terminal
