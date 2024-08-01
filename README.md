@@ -16,6 +16,7 @@ eventNote
 ├── client.py
 ├── README.md
 ├── server.py
+├── test_ConnectionToMongoDB.py
 └── templates
     └── index.html
 ```
@@ -32,6 +33,9 @@ DataBase's name -> "db_events"
 ```
   
 ### USAGE:
+  ### 0. To check the connection to your Mongo DataBase run this following command:
+      python test_ConnectionToMongoDB.py
+      
   ### 1. Run the server in a terminal
       python server.py
       Use this Url http://127.0.0.1:5000 to check if the server is ready to be used.
