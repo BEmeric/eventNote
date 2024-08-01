@@ -22,8 +22,8 @@ eventNote
 
 ### Database architecture:
 Atlas MongoDB is used here to manage event Data.
-login : emericbankole@gmail.com
-pwd   : bioserinity2024
+- login : emericbankole@gmail.com
+- pwd   : bioserinity2024
 
 ```
 DataBase's name -> "db_events"
